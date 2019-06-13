@@ -166,87 +166,6 @@ applicable agreement for further details.
 	(annotation_block (parameter)(rect 272 176 504 224))
 )
 (symbol
-	(rect 616 248 872 376)
-	(text "usart_receive" (rect 5 0 92 15)(font "Arial" ))
-	(text "inst1" (rect 8 112 39 127)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "rx_data[7..0]" (rect 0 0 77 15)(font "Arial" ))
-		(text "rx_data[7..0]" (rect 21 27 98 42)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "data_valid" (rect 0 0 66 15)(font "Arial" ))
-		(text "data_valid" (rect 21 43 87 58)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "clk" (rect 0 0 17 15)(font "Arial" ))
-		(text "clk" (rect 21 59 38 74)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "rst_n" (rect 0 0 33 15)(font "Arial" ))
-		(text "rst_n" (rect 21 75 54 90)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 256 32)
-		(output)
-		(text "freq_out[23..0]" (rect 0 0 92 15)(font "Arial" ))
-		(text "freq_out[23..0]" (rect 129 27 221 42)(font "Arial" ))
-		(line (pt 256 32)(pt 240 32)(line_width 3))
-	)
-	(port
-		(pt 256 48)
-		(output)
-		(text "amp_out[11..0]" (rect 0 0 96 15)(font "Arial" ))
-		(text "amp_out[11..0]" (rect 136 43 232 58)(font "Arial" ))
-		(line (pt 256 48)(pt 240 48)(line_width 3))
-	)
-	(parameter
-		"WAIT"
-		"0000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"GET_NUM"
-		"0001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"RECEIVE"
-		"0011"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"SET"
-		"0010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"FREQUENCY"
-		"0"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"AMPLITUDE"
-		"1"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 240 112))
-	)
-	(annotation_block (parameter)(rect 632 136 864 248))
-)
-(symbol
 	(rect 208 264 240 280)
 	(text "VCC" (rect 7 0 31 13)(font "Arial" (font_size 6)))
 	(text "inst2" (rect 3 5 34 20)(font "Arial" )(invisible))
@@ -345,6 +264,13 @@ applicable agreement for further details.
 		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
+		(pt 0 96)
+		(input)
+		(text "mult_in[11..0]" (rect 0 0 87 15)(font "Arial" ))
+		(text "mult_in[11..0]" (rect 21 91 108 106)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
 		(pt 312 32)
 		(output)
 		(text "address[10..0]" (rect 0 0 93 15)(font "Arial" ))
@@ -368,6 +294,87 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 296 112))
 	)
+)
+(symbol
+	(rect 616 248 872 376)
+	(text "usart_receive" (rect 5 0 92 15)(font "Arial" ))
+	(text "inst1" (rect 8 112 39 127)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "rx_data[7..0]" (rect 0 0 77 15)(font "Arial" ))
+		(text "rx_data[7..0]" (rect 21 27 98 42)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "data_valid" (rect 0 0 66 15)(font "Arial" ))
+		(text "data_valid" (rect 21 43 87 58)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clk" (rect 0 0 17 15)(font "Arial" ))
+		(text "clk" (rect 21 59 38 74)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "rst_n" (rect 0 0 33 15)(font "Arial" ))
+		(text "rst_n" (rect 21 75 54 90)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 256 32)
+		(output)
+		(text "div_out[23..0]" (rect 0 0 84 15)(font "Arial" ))
+		(text "div_out[23..0]" (rect 136 27 220 42)(font "Arial" ))
+		(line (pt 256 32)(pt 240 32)(line_width 3))
+	)
+	(port
+		(pt 256 48)
+		(output)
+		(text "mult_out[11..0]" (rect 0 0 95 15)(font "Arial" ))
+		(text "mult_out[11..0]" (rect 129 43 224 58)(font "Arial" ))
+		(line (pt 256 48)(pt 240 48)(line_width 3))
+	)
+	(parameter
+		"WAIT"
+		"0000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GET_NUM"
+		"0001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"RECEIVE"
+		"0011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SET"
+		"0010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"FREQUENCY"
+		"0"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AMPLITUDE"
+		"1"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 240 112))
+	)
+	(annotation_block (parameter)(rect 632 136 864 248))
 )
 (connector
 	(pt 264 256)
@@ -593,16 +600,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 264 88)
-	(pt 264 -96)
-	(bus)
-)
-(connector
-	(pt 408 88)
-	(pt 264 88)
-	(bus)
-)
-(connector
 	(pt 408 88)
 	(pt 408 168)
 	(bus)
@@ -620,6 +617,46 @@ applicable agreement for further details.
 (connector
 	(pt 872 280)
 	(pt 928 280)
+	(bus)
+)
+(connector
+	(pt 408 88)
+	(pt 240 88)
+	(bus)
+)
+(connector
+	(pt 240 -96)
+	(pt 240 88)
+	(bus)
+)
+(connector
+	(pt 240 -96)
+	(pt 264 -96)
+	(bus)
+)
+(connector
+	(pt 872 296)
+	(pt 912 296)
+	(bus)
+)
+(connector
+	(pt 912 424)
+	(pt 912 296)
+	(bus)
+)
+(connector
+	(pt 912 424)
+	(pt 296 424)
+	(bus)
+)
+(connector
+	(pt 296 -80)
+	(pt 296 424)
+	(bus)
+)
+(connector
+	(pt 296 -80)
+	(pt 264 -80)
 	(bus)
 )
 (junction (pt 248 272))

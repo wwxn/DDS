@@ -4,13 +4,13 @@ module usart_receive
 	input data_valid,
 	input clk,
 	input rst_n,
-	output [23:0] freq_out,
-	output [11:0] amp_out
+	output [23:0] div_out,
+	output [11:0] mult_out
 );
 
 reg set_select;
-reg [23:0] freq_out_reg;
-reg [11:0] amp_out_reg;
+reg [23:0] div_out_reg;
+reg [11:0] mult_out_reg;
 reg [3:0] state;
 reg [3:0] state_next;
 reg [4:0] number_to_receive;
@@ -24,8 +24,8 @@ parameter SET=4'b0010;
 parameter FREQUENCY=1'b0;
 parameter AMPLITUDE=1'b1;
 
-assign freq_out=(state==SET)?freq_out_reg:freq_out;
-assign amp_out=(state==SET)?amp_out_reg:amp_out;
+assign div_out=(state==SET)?div_out_reg:div_out;
+assign mult_out=(state==SET)?mult_out_reg:mult_out;
 
 always@(posedge clk)
 if(!rst_n)
@@ -43,7 +43,7 @@ always@* begin
 				state_next<=GET_NUM;
 				set_select<=FREQUENCY;
 			end
-			else if(rx_data=="A") begin
+			else if(rx_data=="M") begin
 				state_next<=GET_NUM;
 				set_select<=AMPLITUDE;
 			end
@@ -63,8 +63,8 @@ end
 
 always@(posedge clk)
 	if(!rst_n)begin
-		freq_out_reg<=24'b0;
-		amp_out_reg<=24'b0;
+		div_out_reg<=24'b0;
+		mult_out_reg<=24'b0;
 		number_to_receive<=4'b0;
 		number_received<=4'b0;
 	end
@@ -78,17 +78,17 @@ always@(posedge clk)
 			GET_NUM:begin
 				number_to_receive<=rx_data;
 				if(set_select==AMPLITUDE)
-					amp_out_reg<=12'b0;
+					mult_out_reg<=12'b0;
 				else
-					freq_out_reg<=24'b0;
+					div_out_reg<=24'b0;
 			end
 			RECEIVE:
 				if(set_select==AMPLITUDE)begin
-					amp_out_reg<=(amp_out_reg<<8)|rx_data;
+					mult_out_reg<=(mult_out_reg<<8)|rx_data;
 					number_received<=number_received+1'b1;
 				end
 				else begin
-					freq_out_reg<=(freq_out_reg<<8)|rx_data;
+					div_out_reg<=(div_out_reg<<8)|rx_data;
 					number_received<=number_received+1'b1;
 				end
 			endcase

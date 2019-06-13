@@ -3,54 +3,54 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'inst4|altpll_component|pll|clk[0]'
-Slack : -12.423
-TNS   : -455.532
-
-Type  : Slow Model Setup 'clk'
-Slack : -4.862
-TNS   : -109.876
+Slack : -9.059
+TNS   : -351.917
 
 Type  : Slow Model Setup 'uart_rx:inst|rx_data[0]'
-Slack : -4.581
-TNS   : -4.581
+Slack : -4.170
+TNS   : -4.170
 
 Type  : Slow Model Setup 'usart_receive:inst1|state.SET'
-Slack : -1.870
-TNS   : -21.926
+Slack : -3.716
+TNS   : -71.799
 
-Type  : Slow Model Setup 'usart_receive:inst1|freq_out[0]'
-Slack : 1.506
+Type  : Slow Model Setup 'clk'
+Slack : -3.637
+TNS   : -110.051
+
+Type  : Slow Model Setup 'dds_out:inst5|counter[0]'
+Slack : 0.540
 TNS   : 0.000
 
-Type  : Slow Model Hold 'usart_receive:inst1|freq_out[0]'
-Slack : -3.221
-TNS   : -35.652
-
 Type  : Slow Model Hold 'clk'
-Slack : -1.882
-TNS   : -13.481
+Slack : -2.434
+TNS   : -7.698
+
+Type  : Slow Model Hold 'dds_out:inst5|counter[0]'
+Slack : -2.023
+TNS   : -24.356
 
 Type  : Slow Model Hold 'uart_rx:inst|rx_data[0]'
-Slack : -0.514
-TNS   : -0.514
+Slack : -1.163
+TNS   : -1.163
+
+Type  : Slow Model Hold 'usart_receive:inst1|state.SET'
+Slack : 0.019
+TNS   : 0.000
 
 Type  : Slow Model Hold 'inst4|altpll_component|pll|clk[0]'
 Slack : 0.499
-TNS   : 0.000
-
-Type  : Slow Model Hold 'usart_receive:inst1|state.SET'
-Slack : 0.757
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'inst4|altpll_component|pll|clk[0]'
 Slack : -1.527
 TNS   : -235.158
 
-Type  : Slow Model Minimum Pulse Width 'uart_rx:inst|rx_data[0]'
+Type  : Slow Model Minimum Pulse Width 'dds_out:inst5|counter[0]'
 Slack : 0.500
 TNS   : 0.000
 
-Type  : Slow Model Minimum Pulse Width 'usart_receive:inst1|freq_out[0]'
+Type  : Slow Model Minimum Pulse Width 'uart_rx:inst|rx_data[0]'
 Slack : 0.500
 TNS   : 0.000
 
@@ -63,54 +63,54 @@ Slack : 8.758
 TNS   : 0.000
 
 Type  : Fast Model Setup 'inst4|altpll_component|pll|clk[0]'
-Slack : -4.180
-TNS   : -137.369
-
-Type  : Fast Model Setup 'uart_rx:inst|rx_data[0]'
-Slack : -1.709
-TNS   : -1.709
-
-Type  : Fast Model Setup 'clk'
-Slack : -0.626
-TNS   : -12.706
+Slack : -2.979
+TNS   : -101.621
 
 Type  : Fast Model Setup 'usart_receive:inst1|state.SET'
-Slack : -0.476
-TNS   : -5.060
+Slack : -1.407
+TNS   : -27.683
 
-Type  : Fast Model Setup 'usart_receive:inst1|freq_out[0]'
-Slack : 0.448
+Type  : Fast Model Setup 'uart_rx:inst|rx_data[0]'
+Slack : -1.359
+TNS   : -1.359
+
+Type  : Fast Model Setup 'clk'
+Slack : -0.351
+TNS   : -5.866
+
+Type  : Fast Model Setup 'dds_out:inst5|counter[0]'
+Slack : 0.149
 TNS   : 0.000
 
 Type  : Fast Model Hold 'clk'
-Slack : -1.171
-TNS   : -17.234
-
-Type  : Fast Model Hold 'usart_receive:inst1|freq_out[0]'
-Slack : -0.637
-TNS   : -6.007
+Slack : -1.162
+TNS   : -15.061
 
 Type  : Fast Model Hold 'uart_rx:inst|rx_data[0]'
-Slack : -0.147
-TNS   : -0.147
+Slack : -0.383
+TNS   : -0.383
+
+Type  : Fast Model Hold 'dds_out:inst5|counter[0]'
+Slack : -0.246
+TNS   : -2.130
 
 Type  : Fast Model Hold 'inst4|altpll_component|pll|clk[0]'
 Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast Model Hold 'usart_receive:inst1|state.SET'
-Slack : 0.869
+Slack : 0.654
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'inst4|altpll_component|pll|clk[0]'
 Slack : -0.673
 TNS   : -103.642
 
-Type  : Fast Model Minimum Pulse Width 'uart_rx:inst|rx_data[0]'
+Type  : Fast Model Minimum Pulse Width 'dds_out:inst5|counter[0]'
 Slack : 0.500
 TNS   : 0.000
 
-Type  : Fast Model Minimum Pulse Width 'usart_receive:inst1|freq_out[0]'
+Type  : Fast Model Minimum Pulse Width 'uart_rx:inst|rx_data[0]'
 Slack : 0.500
 TNS   : 0.000
 

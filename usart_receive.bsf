@@ -54,15 +54,15 @@ applicable agreement for further details.
 	(port
 		(pt 256 32)
 		(output)
-		(text "freq_out[23..0]" (rect 0 0 106 12)(font "Arial" ))
-		(text "freq_out[23..0]" (rect 129 27 235 39)(font "Arial" ))
+		(text "div_out[23..0]" (rect 0 0 99 12)(font "Arial" ))
+		(text "div_out[23..0]" (rect 136 27 235 39)(font "Arial" ))
 		(line (pt 256 32)(pt 240 32)(line_width 3))
 	)
 	(port
 		(pt 256 48)
 		(output)
-		(text "amp_out[11..0]" (rect 0 0 99 12)(font "Arial" ))
-		(text "amp_out[11..0]" (rect 136 43 235 55)(font "Arial" ))
+		(text "mult_out[11..0]" (rect 0 0 106 12)(font "Arial" ))
+		(text "mult_out[11..0]" (rect 129 43 235 55)(font "Arial" ))
 		(line (pt 256 48)(pt 240 48)(line_width 3))
 	)
 	(parameter

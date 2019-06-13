@@ -6,7 +6,8 @@ module dds_out
 	output adc_clock,
 	output [13:0] dac_data_out,
 	input [13:0] q,
-	input [23:0] counter_in
+	input [23:0] counter_in,
+	input [11:0] mult_in
 );
 
 reg [23:0] counter;
@@ -35,8 +36,8 @@ always@(posedge clk_400M)
 	if(!rst_n)
 		address_reg<=7'd0;
 	else if(counter==(counter_in))begin
-		if(address_reg<=11'h07ce)
-			address_reg<=address_reg+1'b1;
+		if(address_reg<=(11'h07cf-mult_in))
+			address_reg<=address_reg+mult_in;
 		else
 			address_reg<=11'd0;
 		adc_clock_reg<=1'b0;

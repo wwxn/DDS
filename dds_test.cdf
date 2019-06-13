@@ -4,10 +4,10 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C5T144) Path("C:/Users/wxn/Desktop/dds_test/") File("dds_test.sof") MfrSpec(OpMask(1));
+		Device PartName(EPCS4) Path("C:/Users/wxn/Desktop/DDS-master/") File("dds_test.pof") MfrSpec(OpMask(7) Child_OpMask(1 7));
 
 ChainEnd;
 
 AlteraBegin;
-	ChainType(JTAG);
+	ChainType(asc);
 AlteraEnd;

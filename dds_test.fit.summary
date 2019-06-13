@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Jun 12 20:58:31 2019
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : dds_test
+Top-level Entity Name : dds_test
+Family : Cyclone II
+Device : EP2C5T144C8
+Timing Models : Final
+Total logic elements : 253 / 4,608 ( 5 % )
+    Total combinational functions : 247 / 4,608 ( 5 % )
+    Dedicated logic registers : 117 / 4,608 ( 3 % )
+Total registers : 117
+Total pins : 18 / 89 ( 20 % )
+Total virtual pins : 0
+Total memory bits : 28,000 / 119,808 ( 23 % )
+Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )

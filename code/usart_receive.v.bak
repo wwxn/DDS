@@ -1,0 +1,43 @@
+module usart_receive
+(
+	input [7:0] rx_data,
+	input data_valid,
+	input clk,
+	input rst_n,
+	output [23:0] freq_out,
+	output [11:0] amp_out
+);
+
+reg [23:0] freq_out;
+reg [11:0] amp_out;
+reg [3:0] state;
+reg [3:0] state_next;
+
+parameter WAIT1=4'b0000;
+parameter WAIT2=4'b0001;
+parameter GET_NUM=4'b0011;
+parameter RECEIVE=4'b0010;
+parameter SET=4'b0110;
+
+
+always@(posedge clk)
+if(!rst_n)
+	state<=WAIT1;
+else 
+	state<=state_next;
+
+
+always@* begin
+	state_next<=4'bx;
+	if(data_valid)
+		case (state)
+		WAIT1:begin
+			if(rx_data=='F')
+				state_next<=WAIT2;
+			else
+				state_next<=WAIT1;
+		end
+		endcase
+end
+
+endmodule 

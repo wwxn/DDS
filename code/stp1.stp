@@ -1,0 +1,44 @@
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: EP2C5 (0x020B10DD)" sof_file="../dds_test.sof">
+  <display_tree gui_logging_enabled="0">
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="data horizontal scroll position" value="256"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="128"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="1016"/>
+    </position_info>
+  </instance>
+  <mnemonics>
+    <table name="state_table (1)" width="4">
+      <symbol name="GET_NUM" value="0001"/>
+      <symbol name="RECEIVE" value="0010"/>
+      <symbol name="SET" value="0100"/>
+      <symbol name="WAIT" value="1000"/>
+    </table>
+    <table name="state_table (2)" width="4">
+      <symbol name="GET_NUM" value="0001"/>
+      <symbol name="RECEIVE" value="0010"/>
+      <symbol name="SET" value="0100"/>
+      <symbol name="WAIT" value="1000"/>
+    </table>
+  </mnemonics>
+  <static_plugin_mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <multi attribute="column width" size="23" value="34,34,182,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="frame size" size="2" value="1920,1005"/>
+    <multi attribute="jtag widget size" size="2" value="370,139"/>
+  </global_info>
+</session>
